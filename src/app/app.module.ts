@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { ToastrModule } from 'ngx-toastr';
 import { EspecialidadesIndexComponent } from './Especialidades/especialidades-index/especialidades-index.component';
 import { EspecialidadesFormComponent } from './Especialidades/especialidades-form/especialidades-form.component';
-import{HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfesoresIndexComponent } from './Profesores/profesores-index/profesores-index.component';
+import { ProfesoresFormComponent } from './Profesores/profesores-form/profesores-form.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
     AppComponent,
     EspecialidadesIndexComponent,
-    EspecialidadesFormComponent
+    EspecialidadesFormComponent,
+    ProfesoresIndexComponent,
+    ProfesoresFormComponent
   ],
   imports: [
     CommonModule,
@@ -26,8 +32,10 @@ import{HttpClientModule} from '@angular/common/http';
       autoDismiss: false,
       positionClass: "toast-bottom-right",
     }
-      
-    )
+    ),
+    FormsModule,
+    ReactiveFormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

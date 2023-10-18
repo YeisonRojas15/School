@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-8">
+    <form [formGroup]="frmProfesor">
+        <input
+        class="form-control m-2"
+        type="text"
+        placeholder="Nombre del profesor" 
+        formControlName="nombre"
+        >
+        <input
+        class="form-control m-2"
+        type="text"
+        placeholder="Apellido del profesor" 
+        formControlName="apellido"
+        >
+        <ng-select [items]="listEspecialidades"
+                    placeholder="Especialidad"
+                    bindLabel="nombre"
+                    bindValue="id"
+                    formControlName="especialidad"
+        ></ng-select>
+    
+        <button class="btn btn-primary m-2" (click)="guardar()">Guardar Profesor</button>
+        <button class="btn btn-danger m-2" (click)="guardar()">Volver</button>
+    </form>
+    </div>  
+    </div>
+    </div>
+    </div>

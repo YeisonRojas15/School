@@ -1,5 +1,14 @@
 <h1>Listado de especialidades</h1>
-<table>
+<div class="row mt-1 mb-1">
+    <div class="col">
+<button class="btn btn-primary btn-sm" (click)="new()">Crear especialidad</button>
+</div>
+</div>
+<table class="table table-striped table-bordered">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
     <thead>
         <tr>
             <th>ID</th>
@@ -12,9 +21,13 @@
             <th>{{especialidad.id}}</th>
             <th>{{especialidad.nombre}}</th>
             <th>
-                <button (click)="edit(especialidad.id)">Editar</button>
-                <button (click)="delete(especialidad.id)">Eliminar</button>
+                <button class="btn btn-warning btn-sm" (click)="edit(especialidad.id)">Editar</button>
+                <button class="btn btn-danger btn-sm" (click)="delete(especialidad.id)">Eliminar</button>
             </th>
         </tr>
     </tbody>
 </table>
+<div>
+<div class="col-lg-6">
+</div>
+</div>

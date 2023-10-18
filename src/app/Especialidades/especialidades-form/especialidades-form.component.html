@@ -1,1 +1,14 @@
-<p>especialidades-form works!</p>
+<form [formGroup]="frmEspecialidad">
+
+    <div class="row">
+    <div class="col-lg-3">
+    <input 
+    type="text"
+    class="form-control"
+    placeholder="Nombres" 
+    formControlName="nombre">
+    </div>  
+    </div>
+
+    <button class="btn btn-success" (click)="guardar()">Guardar especialidad</button>
+</form>
